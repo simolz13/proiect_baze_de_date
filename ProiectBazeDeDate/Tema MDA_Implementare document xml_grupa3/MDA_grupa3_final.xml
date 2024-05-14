@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- S-a incercat crearea unor entitati prin care sa putem adauga o descriere pentru fiecare facultate (adresa, web, telefon, birou secretariat). 
+Pentru aceasta s-a creat cate un fisier xml cu o descriere pentru fiecare facultate -->
+<!DOCTYPE facultati [
+<!ENTITY facultate_AC SYSTEM "facultate_AC.xml">
+<!ENTITY facultate_ET SYSTEM "facultate_ET.xml">
+<!ENTITY facultate_A SYSTEM "facultate_A.xml">
+]>
+
+<!-- structura utilizata pentru stocarea programelor de studiu ale unei universitati -->
+<facultati xmlns:f="https://www.upt.ro/Upt-Timisoara_facultati_151_ro.html"
+    xmlns:d="http://www.upt.ro/Informatii_numar-de-locuri---anexa-la-hca-49-28052019_1268_ro.html"
+    xmlns:p="http://www.upt.ro/Informatii_lista-programelor-de-studii-specializarilor-la-ciclul-licent_1190_ro.html">
+    <!-- pentru fiecare facultate introdusa am folosit un atribut pentru a stabili un ID corespunzator facultatii respective -->
+    <f:facultate id_facultate="1">
+        <f:nume>&#34;Automatica si calculatoare&#34;</f:nume>
+        <!-- adaugarea unei referinte la un alt fisier xml unde este descrisa facultatea introdusa-->
+        &facultate_AC;
+        <!-- precizarea domeniilor de studiu din cadrul unei facultati-->
+        <f:domeniu id_domeniu="1">
+            <d:nume>Calculatoare şi tehnologia informaţiei</d:nume>
+            <!-- precizarea programelor de studiu din cadrul unui domeniu de studiu-->
+            <d:program id_program="1">
+                <p:nume>Calculatoare</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>25</taxa>
+                    <buget>155</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs cu probă de verificare a cunoștințelor (tip grilă) - Matematică</p:tip_concurs>
+            </d:program>
+            <d:program id_program="2">
+                <p:nume>Calculatoare - lb. engleză</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>15</taxa>
+                    <buget>75</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs cu probă de verificare a cunoștințelor (tip grilă) - Matematică</p:tip_concurs>
+            </d:program>
+        </f:domeniu>
+        <f:domeniu id_domeniu="2">
+            <d:nume>Ingineria sistemelor</d:nume>
+            <d:program id_program="1">
+                <p:nume>Automatică şi informatică aplicată</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>45</taxa>
+                    <buget>175</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs cu probă de verificare a cunoștințelor (tip grilă) - Matematică</p:tip_concurs>
+            </d:program>
+        </f:domeniu>
+        <f:domeniu id_domeniu="3">
+            <d:nume>Informatică</d:nume>
+            <d:program id_program="1">
+                <p:nume>Informatică</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>35</taxa>
+                    <buget>65</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs de dosare</p:tip_concurs>
+            </d:program>
+            <d:program id_program="2">
+                <p:nume>Informatică ID</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>100</taxa>
+                    <buget>0</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs de dosare</p:tip_concurs>
+            </d:program>
+            <d:program id_program="3">
+                <p:nume>Tehnologii Informatice</p:nume>
+                <p:ciclu>Master</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>5</taxa>
+                    <buget>40</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Interviu</p:tip_concurs>
+            </d:program>
+        </f:domeniu>
+    </f:facultate>
+    <f:facultate id_facultate="2">
+        <f:nume>&#34;ELECTROTEHNICĂ ȘI ELECTROENERGETICĂ&#34;</f:nume>
+        <!-- adaugarea unei referinte la un alt fisier xml unde este descrisa facultatea introdusa-->
+        &facultate_ET; 
+        <!-- precizarea domeniilor de studiu din cadrul unei facultati-->
+        <f:domeniu id_domeniu="1">
+            <d:nume>Inginerie electrică</d:nume>
+            <!-- precizarea programelor de studiu din cadrul unui domeniu de studiu-->
+            <d:program id_program="1">
+                <p:nume>Electrotehnică</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>15</taxa>
+                    <buget>90</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs de dosare</p:tip_concurs>
+            </d:program>
+            <d:program id_program="2">
+                <p:nume>Electrotehnică şi electronică de putere</p:nume>
+                <p:ciclu>Master</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>5</taxa>
+                    <buget>45</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs de dosare</p:tip_concurs>
+            </d:program>
+        </f:domeniu>
+        <f:domeniu id_domeniu="2">
+            <d:nume>Inginerie energetică</d:nume>
+            <d:program id_program="1">
+                <p:nume>Ingineria sistemelor electroenergetice</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>15</taxa>
+                    <buget>85</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs de dosare</p:tip_concurs>
+            </d:program>
+        </f:domeniu>
+    </f:facultate>
+    <f:facultate id_facultate="3">
+        <f:nume>&#34;ARHITECTURĂ ȘI URBANISM&#34;</f:nume>
+        <!-- adaugarea unei referinte la un alt fisier xml unde este descrisa facultatea introdusa-->
+        &facultate_A; 
+        <!-- precizarea domeniilor de studiu din cadrul unei facultati-->
+        <f:domeniu id_domeniu="1">
+            <d:nume>Arhitectură</d:nume>
+            <!-- precizarea programelor de studiu din cadrul unui domeniu de studiu-->
+            <d:program id_program="1">
+                <p:nume>Arhitectură</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>10</taxa>
+                    <buget>80</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs cu probă de verificare a cunoștințelor - Desen tehnic şi liber</p:tip_concurs>
+            </d:program>
+            <d:program id_program="2">
+                <p:nume>Mobilier şi amenajări interioare</p:nume>
+                <p:ciclu>Licenta</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>10</taxa>
+                    <buget>30</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Concurs cu probă de verificare a cunoștințelor - Desen tehnic şi liber</p:tip_concurs>
+            </d:program>
+            <d:program id_program="3">
+                <p:nume>Urbanism si amenajarea teritoriulu</p:nume>
+                <p:ciclu>Master</p:ciclu>
+                <p:nr_locuri>
+                    <an>2019</an>
+                    <taxa>10</taxa>
+                    <buget>20</buget>
+                </p:nr_locuri>
+                <p:tip_concurs>Interviu</p:tip_concurs>
+            </d:program>
+        </f:domeniu>
+    </f:facultate>  
+</facultati>
+
